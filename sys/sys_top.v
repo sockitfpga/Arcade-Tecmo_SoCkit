@@ -1232,7 +1232,7 @@ csync csync_vga(clk_vid, vga_hs_osd, vga_vs_osd, vga_cs_osd);
 	assign VGA_G  = (VGA_EN | SW[3]) ? 8'bZZZZZZZZ : vga_o[15:8];
 	assign VGA_B  = (VGA_EN | SW[3]) ? 8'bZZZZZZZZ : vga_o[7:0];
 	//DE10-standard / DE1-SoC / SoCkit implementation for on-board VGA DAC route - additional pins
-	assign VGA_BLANK_N = VGA_HS && VGA_VS;  //VGA DAC additional required pin
+	assign VGA_BLANK_N = VGA_HS && VGA_VS; // tested 1 same problem //VGA DAC additional required pin
 	assign VGA_SYNC_N = 0; 					//VGA DAC additional required pin
 	assign VGA_CLK = HDMI_TX_CLK; 			//has to define a clock to VGA DAC clock otherwise the picture is noisy 
 `endif
