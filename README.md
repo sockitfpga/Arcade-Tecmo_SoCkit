@@ -2,7 +2,9 @@
 
 Ported by  Somhic from https://github.com/MiSTer-devel/Arcade-Tecmo_MiSTer
 
-**STATUS: Currently not showing video.**
+**STATUS:  Core frequency is 80 MHz instead of 96 MHz**
+
+Original clksys and sdram clock is 96 MHz.    At that frequency the core hungs. Tried 90 and 86 MHz with the same result. Only at 80 MHz the core boots Ok and is very playable.
 
 Follows original README.
 

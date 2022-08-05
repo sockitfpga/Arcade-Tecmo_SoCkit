@@ -267,7 +267,7 @@ wire        sdram_ack;
 wire        sdram_valid;
 wire [31:0] sdram_q;
 
-sdram #(.CLK_FREQ(96.0)) sdram
+sdram #(.CLK_FREQ(80.0)) sdram
 (
   .reset(~locked),
   .clk(clk_sys),
@@ -387,7 +387,7 @@ always @(posedge clk_sys) begin
   if (ioctl_wr && (ioctl_index == 254) && !ioctl_addr[24:3]) sw[ioctl_addr[2:0]] <= ioctl_data;
 end
 
-tecmo #(.CLK_FREQ(96.0)) tecmo
+tecmo #(.CLK_FREQ(80.0)) tecmo
 (
   .reset(reset),
 
